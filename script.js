@@ -1,3 +1,4 @@
+// Dark mode toggle
 const toggle = document.getElementById("theme-toggle");
 const body = document.body;
 
@@ -19,18 +20,18 @@ toggle.addEventListener("click", () => {
   }
 });
 
+// Scroll reveal animation
 const reveals = document.querySelectorAll(".reveal");
 
 const revealOnScroll = () => {
   const windowHeight = window.innerHeight;
-  reveals.forEach(section => {
-    const top = section.getBoundingClientRect().top;
+  reveals.forEach(el => {
+    const top = el.getBoundingClientRect().top;
     if (top < windowHeight - 80) {
-      section.classList.add("active");
+      el.classList.add("active");
     }
   });
 };
 
 window.addEventListener("scroll", revealOnScroll);
 revealOnScroll();
-``
