@@ -44,7 +44,7 @@ body {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   background: linear-gradient(
-    to down,
+    to left,
     rgba(15, 15, 15, 1),
     rgba(15, 15, 15, 0.95),
     rgba(15, 15, 15, 0.75),
