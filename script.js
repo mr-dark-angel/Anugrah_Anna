@@ -25,6 +25,36 @@ function revealOnScroll() {
     }
   });
 }
-
 window.addEventListener("scroll", revealOnScroll);
 revealOnScroll();
+
+// Animated role text
+const roles = [
+  "Data Engineer | Robotics & Automation Engineer"
+];
+
+const roleEl = document.getElementById("animated-role");
+let roleIndex = 0;
+let charIndex = 0;
+let deleting = false;
+
+function typeEffect() {
+  const current = roles[roleIndex];
+
+  if (!deleting) {
+    roleEl.textContent = current.slice(0, ++charIndex);
+    if (charIndex === current.length) {
+      setTimeout(() => deleting = true, 14000);
+    }
+  } else {
+    roleEl.textContent = current.slice(0, --charIndex);
+    if (charIndex === 0) {
+      deleting = false;
+      roleIndex = (roleIndex + 1) % roles.length;
+    }
+  }
+
+  setTimeout(typeEffect, deleting ? 50 : 20);
+}
+
+typeEffect();
