@@ -41,7 +41,7 @@ function typeEffect() {
 
   if (!deleting) {
     roleEl.textContent = text.slice(0, ++charIndex);
-    if (charIndex === text.length) setTimeout(() => deleting = true, 14000);
+    if (charIndex === text.length) setTimeout(() => deleting = true, 140000);
   } else {
     roleEl.textContent = text.slice(0, --charIndex);
     if (charIndex === 0) {
