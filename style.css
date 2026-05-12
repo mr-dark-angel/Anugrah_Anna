@@ -285,7 +285,7 @@ h2 {
 
 /* ICON PLACEHOLDER */
 .project-image::before {
-  content: "📷";
+  content: "";
   font-size: 1.5rem;
   opacity: 0.4;
 }
